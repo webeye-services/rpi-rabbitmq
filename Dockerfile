@@ -4,7 +4,8 @@ MAINTAINER Vaclav Rak <rak@webeye.services>
 
 ADD rabbitmq.deb rabbitmq.deb
 
-RUN groupadd -r rabbitmq && useradd -r -d /var/lib/rabbitmq -m -g rabbitmq rabbitmq
+RUN groupadd -r rabbitmq 
+RUN useradd -r -d /var/lib/rabbitmq -m -g rabbitmq rabbitmq
 
 RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 434975BD900CCBE4F7EE1B1ED208507CA14F4FCA
 
