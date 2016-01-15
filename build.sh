@@ -3,7 +3,7 @@ set -e
 set -E
 
 tag="3.5.6"
-#wget http://www.rabbitmq.com/releases/rabbitmq-server/v$tag/rabbitmq-server_$tag-1_all.deb -Orabbitmq.deb
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v$tag/rabbitmq-server_$tag-1_all.deb -Orabbitmq.deb
 
 rpi_ip="172.31.255.93"
 
