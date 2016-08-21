@@ -38,6 +38,10 @@ VOLUME /var/lib/rabbitmq
 RUN ln -sf /var/lib/rabbitmq/.erlang.cookie /root/
 
 COPY docker-entrypoint.sh /
+
+# saw following line in other repo (klaemo/docker-couchdb) to fix the "no permission" error
+RUN chmod +x /docker-entrypoint.sh
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 4369 5671 5672 25672
